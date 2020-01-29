@@ -1,7 +1,7 @@
 # CS 100 Programming Project
 
 Winter 2020\
-Anthony Pan 862119435
+Anthony Pan 862119435\
 Joshua Torres 861221634
 
 ### Introduction
