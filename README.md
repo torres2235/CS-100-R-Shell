@@ -19,7 +19,7 @@ Connector - Abstract parent class that will... \
 AndConnector - Inherits from Connector Class and will process when the user inputs "&&".\
 OrConnector - Inherits from Connector Class and will process when the user inputs "||".\
 SemiConnector -Inherits from Connector Class and will process when the user inputs ";".
-
+Exit - Closes the R'Shell
 # Prototypes/Research
 fork() -\
 execvp() -\
