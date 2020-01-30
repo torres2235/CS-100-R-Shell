@@ -16,8 +16,8 @@ Token - Takes input and creates tokens\
 Tokenizer - Evaluates the tokens and processes them into commands\
 Executor - Single class responsible for executing the commands inputed by the user.\
 Connector - Abstract parent class that will... \
-AndConnector - Inherits from Connector Class and will process when the user inputs "&&".\
-OrConnector - Inherits from Connector Class and will process when the user inputs "||".\
+AndConnector - Inherits from Connector Class and will process when the user inputs "&&". If first arguement passes, run the second arguement. If second arguement passes, output both.\
+OrConnector - Inherits from Connector Class and will process when the user inputs "||". If first arguement passes only output first. If first arguement fails, run second arguement. If second arguement passes, output.\
 SemiConnector -Inherits from Connector Class and will process when the user inputs ";".\
 Exit - Closes the R'Shell
 # Prototypes/Research
