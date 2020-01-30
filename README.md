@@ -22,9 +22,9 @@ OrConnector - Inherits from Connector Class and will process when the user input
 SemiConnector -Inherits from Connector Class and will process when the user inputs ";".\
 Exit - Closes the R'Shell
 # Prototypes/Research
-fork() - Created a small program (for_demo.cpp) to experiment with fork(), pid, and how children work.
+fork() - Created a small program (for_demo.cpp) to experiment with fork(), pid, and how children work.\
 execvp() -\
-waitpid() -\
+waitpid() -
 
 We are still experimenting with execv() and waitpid().
 
