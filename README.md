@@ -12,6 +12,7 @@ This is a command shell, called R'Shell, developed in C++. In this R'Shell, the 
 
 # Classes
 Executor - Single class responsible for executing the commands inputed by the user.\
+Parser - Evaluates the user's input to determine...
 Connector - Abstract parent class that will... \
 AndConnector - Inherits from Connector Class and will process when the user inputs "&&".\
 OrConnector - Inherits from Connector Class and will process when the user inputs "||".\
