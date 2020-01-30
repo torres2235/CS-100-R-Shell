@@ -11,6 +11,7 @@ This is a command shell, called R'Shell, developed in C++. In this R'Shell, the 
 ### OMT Diagram
 
 ### Classes
+Executor - Single class responsible for executing the commands inputed by the user.\
 Connector -\
 AndConnector -\
 OrConnector -\
