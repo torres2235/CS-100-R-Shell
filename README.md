@@ -24,7 +24,12 @@ Exit - Closes the R'Shell
 fork() -\
 execvp() -\
 waitpid() -
-WIFEXITED() - ?\
-WEXITSTATUS() - ?
 
 # Development and Roadmap Testing
+Anthony Pan | Joshua Torres
+------------ | -------------
+[ ] Create ReadInput Class| [ ] Create Connector Class
+[ ] Create Token Class | [ ] Create AndConnector
+[ ] Create Tokenizer Class | [ ] Create OrConnector
+[ ] Create Executor Class | [ ] Create SemiConnector
+[ ] Create Exit Class | [ ] Create Unit Tests
