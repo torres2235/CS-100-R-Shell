@@ -17,9 +17,11 @@ AndConnector - Inherits from Connector Class and will process when the user inpu
 OrConnector - Inherits from Connector Class and will process when the user inputs "||".\
 SemiConnector -Inherits from Connector Class and will process when the user inputs ";".
 
-### Development and Roadmap Testing
+### Prototypes/Research
 fork() -\
 execvp() -\
 waitpid() -
 WIFEXITED() - ?\
 WEXITSTATUS() - ?
+
+### Development and Roadmap Testing
