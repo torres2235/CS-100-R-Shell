@@ -11,8 +11,9 @@ This is a command shell, called R'Shell, developed in C++. In this R'Shell, the 
 # OMT Diagram
 
 # Classes
-ReadInput - Single class responsible for printing $ and accepting command inputs\
-Parser - Evaluates the user's input to determine...\
+ReadInput - Single class responsible for printing $ and accepting input\
+Token - Takes input and creates tokens\
+Tokenizer - Evaluates the tokens and processes them into commands\
 Executor - Single class responsible for executing the commands inputed by the user.\
 Connector - Abstract parent class that will... \
 AndConnector - Inherits from Connector Class and will process when the user inputs "&&".\
