@@ -11,6 +11,7 @@ This is a command shell, called R'Shell, developed in C++. In this R'Shell, the 
 # OMT Diagram
 ![R'Shell Assignment 1](images/R'Shell%20Assignment%201.png)
 
+Arrays should be replaced with vectors.
 # Classes
 ReadInput - Single class responsible for printing $ and accepting input\
 Token - Takes input and creates tokens\
