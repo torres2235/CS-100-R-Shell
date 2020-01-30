@@ -11,5 +11,14 @@ This is a command shell, called R'Shell, developed in C++. In this R'Shell, the 
 ### OMT Diagram
 
 ### Classes
+Connector -\
+AndConnector -\
+OrConnector -\
+SemiConnector -
 
 ### Development and Roadmap Testing
+fork() -\
+execvp() -\
+waitpid() -
+WIFEXITED() - ?\
+WEXITSTATUS() - ?
