@@ -14,7 +14,7 @@ This is a command shell, called R'Shell, developed in C++. In this R'Shell, the 
 Arrays should be replaced with vectors.
 # Classes
 ReadInput - Single class responsible for printing $ and accepting input\
-Token - Takes input and creates tokens\
+Parser - Takes input and creates tokens\
 Tokenizer - Evaluates the tokens and processes them into commands\
 Executor - Single class responsible for executing the commands inputed by the user.\
 Connector - Abstract parent class that will... \
