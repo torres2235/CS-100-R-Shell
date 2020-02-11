@@ -4,6 +4,7 @@
 #include <vector>
 
 vector<char>* Parser(string userInput) {
-
-	vector<char>* tokens;
+	
+	string sample = "echo hello && mkdir || echo goodbye";
+	tokenizer<> tok(sample);
 }
