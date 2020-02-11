@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void ReadInput (char* UserInput) {
+string ReadInput () {
 	printf("$ ");
 	
 }
