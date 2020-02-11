@@ -9,10 +9,10 @@ int main()
 {
         string text = "ls -a && mkdir test || echo string";
 
-        char_separator<char> sep(", ");
+        char_separator<char> sep(" ");
         tokenizer<char_separator<char>> tokens(text, sep);
         for (const auto& t : tokens) {
-		if (t == "&&" || "||" || ";") {
+		if (t == "&" || "|" || ";") {
 			cout << t << endl;
 		}
 		else {
