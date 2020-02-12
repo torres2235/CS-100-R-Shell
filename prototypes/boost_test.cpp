@@ -12,12 +12,7 @@ int main()
         char_separator<char> sep(" ");
         tokenizer<char_separator<char>> tokens(text, sep);
         for (const auto& t : tokens) {
-		if (t == "&" || "|" || ";") {
-			cout << t << endl;
-		}
-		else {
-			cout << t;
-		}
+		cout << t << endl;
         }
 }
 
