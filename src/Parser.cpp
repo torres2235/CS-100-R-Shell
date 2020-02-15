@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Parser() {
+class Parser{
 	private:   
 		std::vector <std::string> subStrings;
 		std::string sub;
@@ -82,7 +82,7 @@ class Parser() {
     		        		std::cout << *i << std::endl;
     		        		  		}
     		*/
-			vector getVector() {
+			std::vector<std::string> getVector() {
 				return subStrings;
 			}
 }

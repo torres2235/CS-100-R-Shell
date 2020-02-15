@@ -17,7 +17,7 @@ class Parser {
   
 	public:
 		Parser(std::string userInput);
-		vector getVector();              
-}
+		vector<string> getVector();              
+};
 
 #endif //__PARSER_HPP__

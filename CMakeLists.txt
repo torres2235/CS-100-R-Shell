@@ -8,14 +8,13 @@ ADD_SUBDIRECTORY(googletest)
 SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(rshell
-    main.cpp
+    src/main.cpp
 )
 
 ADD_EXECUTABLE(test
-    /src/unit_test.cpp
+    src/unit_test.cpp
 )
 
-TARGET_LINK_LIBRARIES(test gtest)
 TARGET_LINK_LIBRARIES(
     rshell
     LINK_PUBLIC ${BOOST_LIBRARIES}
