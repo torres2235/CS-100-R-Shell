@@ -8,12 +8,16 @@
 
 using namespace std;
 
-class ReadInput() {
+class ReadInput {
 	private:
 		string input;
 		string reader = "$ ";
 	public:
-		string getInput {printf(reader); return input = getline (cin, input);}
-}
+		string getInput() {
+			cout << reader;
+			getline(cin,input); 
+			return input;
+		}
+};
 
 #endif //__READINPUT_HPP__
