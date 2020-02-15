@@ -1,22 +1,17 @@
-#ifndef __EXECUTOR_CPP__
-#define __EXECUTOR_CPP__
-
 #include <iostream>
 #include <string>
 #include <boost/tokenizer.hpp>
 #include <vector>
 #include <sys/types.h>
+
+#include "../header/Executor.hpp"
+
 using namespace std;
 using namespace boost;
 
-class Executor
-{
-	private:
-		string input;
-		vector<std::string> exec;
-	public:
-		Executor(vector<string> userInput) {
-			input = userInput;
+
+		Executor::Executor(vector<string> userInput) {
+			input = userInput[0];
       	        	char_separator<char> delimiter(" ");
 
         		tokenizer<char_separator<char>> tokens(input, delimiter);
@@ -33,7 +28,3 @@ class Executor
 
         		execvp(commands[0], commands.data());
 		}
-        
-}
-
-#endif //__EXECUTOR_CPP__
