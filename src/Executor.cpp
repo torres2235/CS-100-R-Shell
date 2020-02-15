@@ -9,7 +9,7 @@
 using namespace std;
 using namespace boost;
 
-class Executor()
+class Executor
 {
 	private:
 		string input;
