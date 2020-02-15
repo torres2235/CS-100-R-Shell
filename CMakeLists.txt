@@ -9,6 +9,7 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(rshell
     src/main.cpp
+    src/Parser.cpp
 )
 
 ADD_EXECUTABLE(test
