@@ -11,11 +11,12 @@ using namespace boost;
 
 int main()
 {
-	
+    //while(1) {
 	ReadInput o = ReadInput();
-	
+	o.setInput();
 	Parser a = Parser(o.getInput());
 	//vector <string> userString = o.getVector();
 	Executor b = Executor(a.getVector());
+    //}
 	return 0;
 }

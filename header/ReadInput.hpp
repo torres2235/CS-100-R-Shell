@@ -13,11 +13,11 @@ class ReadInput {
 		string input;
 		string reader = "$ ";
 	public:
-		void getInput() {
+		void setInput() {
 			cout << reader;
 			getline(cin,input);	
 		}
-		string getString() {
+		string getInput() {
 			return input;
 		}
 };
