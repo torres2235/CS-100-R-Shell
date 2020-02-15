@@ -13,12 +13,7 @@ int main()
         char_separator<char> sep(" ");
         tokenizer<char_separator<char>> tokens(text, sep);
         std::copy(tokens.begin(), tokens.end(), std::back_inserter<std::vector<std::string> > (commandVector));
-/**
-	for (int i=0; i < commandVector.size(); i++)
-	{
-		std::cout << commandVector.at(i) << endl;
-	}
-*/
+
 
         std::vector<char *> commands(commandVector.size() + 1);
 
@@ -28,7 +23,7 @@ int main()
 	}
 	
 
-	execvp(commands[0], commands.data());
+	int status = execvp(commands[0], commands.data());
         return 0;
 }
 

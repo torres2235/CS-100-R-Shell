@@ -1,3 +1,6 @@
+#ifndef __EXECUTOR_HPP__
+#define __EXECUTOR_HPP__
+
 #include <iostream>
 #include <string>
 #include <boost/tokenizer.hpp>
@@ -6,16 +9,17 @@
 using namespace std;
 using namespace boost;
 
-class Executor(vector<string> userInput)
+class Executor(vector<std::string> userInput)
 {
 	private:
-		string input;
+		vector<std::string> input;
 		vector<std::string> exec;
 	public:
 		Executor(vector<string> userInput) {input = userInput;}
       	        char_separator<char> delimiter(" ");
 
-        tokenizer<char_separator<char>> tokens(input, delimiter);
+	string instance = input.at(0);
+        tokenizer<char_separator<char>> tokens(instance, delimiter);
         std::copy(tokens.begin(), tokens.end(), std::back_inserter<std::vector<std::string> > (exec));
 
 
@@ -31,4 +35,4 @@ class Executor(vector<string> userInput)
         
 }
 
-
+#endif // __EXECUTOR_HPP__
