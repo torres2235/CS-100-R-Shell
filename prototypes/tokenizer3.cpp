@@ -8,10 +8,11 @@ using namespace boost;
 
 int main()
 {
-        string text = "ls -a -l echo";
+        vector<std::string> vect{ "echo goodbye"};
+	string instance = vect.at(0);
         vector<std::string> commandVector;
         char_separator<char> sep(" ");
-        tokenizer<char_separator<char>> tokens(text, sep);
+        tokenizer<char_separator<char>> tokens(instance, sep);
         std::copy(tokens.begin(), tokens.end(), std::back_inserter<std::vector<std::string> > (commandVector));
 
 
