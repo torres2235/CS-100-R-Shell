@@ -1,24 +1,11 @@
-#ifndef __PARSER_CPP__
-#define __PARSER_CPP__
-
 #include <iostream>
 #include <vector>
 #include <string>
 
 #include "../header/Parser.hpp"
 
-using namespace std;
 
-class Parser{
-	private:   
-		std::vector <std::string> subStrings;
-		std::string sub;
-		std::string s;
-		int index = 0;
-		int length = 0;
-  
-	public:
-		Parser(std::string userInput) {
+		Parser::Parser(std::string userInput) {
 			s = userInput;
 				
 			for(int i = 0; i<= s.length(); i++) {
@@ -27,7 +14,7 @@ class Parser{
 				if (s[i] == '&' && s[i-1] == '&') { //checking for "&&"
               				sub = s.substr(index, length-2);
               
-              				subStrings.push_back(sub);
+        				subStrings.push_back(sub);
               
               				if (i != s.length()) {
                   				index = i;
@@ -82,9 +69,10 @@ class Parser{
     		        		std::cout << *i << std::endl;
     		        		  		}
     		*/
-			std::vector<std::string> getVector() {
-				return subStrings;
-			}
-}
+		}
 
-#endif // __PARSER_CPP__
+		std::vector<std::string> Parser::getVector() {
+			return subStrings;
+		}
+
+
