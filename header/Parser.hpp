@@ -74,7 +74,6 @@ class Parser() {
              	 			subStrings.push_back(sub);
           			}
        
-       				return (subStrings);
   			}
  		/* 
   		for(auto i = subStrings.begin(); i != subStrings.end(); i++) {
