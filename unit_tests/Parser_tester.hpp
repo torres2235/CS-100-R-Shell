@@ -65,4 +65,11 @@ TEST(ParserTester, ParseLongString4) {
 	EXPECT_EQ(parsed.at(5), ";");
 }
 
+TEST(ParserTester, ParseCommentString) {
+	Parser* str = new Parser("echo he#llo");
+	str->parserLogic();
+	vector<string> parsed = str->getVector();
+	EXPECT_EQ(parsed.at(0), "echo he");
+}
+
 #endif //__PARSER_TESTER_HPP__
