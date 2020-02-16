@@ -5,8 +5,10 @@
 #include "../header/Parser.hpp"
 
 
-		Parser::Parser(std::string userInput) {
+		Parser::setString(std::string userInput) {
 			s = userInput;
+		}
+
 				
 			for(int i = 0; i<= s.length(); i++) {
 				length++;

@@ -18,6 +18,9 @@ class Parser {
   
 	public:
 		Parser(std::string userInput);
+		getString(std::string userInput);
+		string parsedComments();
+		void parserLogic();
 		vector<string> getVector();              
 };
 
