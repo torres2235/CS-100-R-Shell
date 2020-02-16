@@ -6,6 +6,7 @@
 #include <boost/tokenizer.hpp>
 #include <vector>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 using namespace std;
 using namespace boost;

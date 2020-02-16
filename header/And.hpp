@@ -5,20 +5,26 @@
 
 class And : public Connector {
 	private:
-		Connector* leftLeaf;
-		Connector* rightLeaf;
+		string leftLeaf;
+		string rightLeaf;
 
 	public:
-		And(Connector* left, Connector* right) : Connector() {
+		And(string left, string right) : Connector() { }
+		
+		virtual setLeftLeaf() {
 			leftLeaf = left;
+		}
+
+		virtual setRightLeaf() {
 			rightLeaf = right;
 		}
-		
-		virtual bool isLeftTrue() {
+
+		virtual int isLeftTrue() {
+			Executor doLeft = Executor(leftLeaf);
 		
 		}
-
-		virtual bool isRightTrue() {
-
+		
+		virtual int isRightTrue() {
+			
 		}
 #endif //__AND_HPP__
