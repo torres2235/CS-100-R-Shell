@@ -4,3 +4,4 @@ ls -a -l
 mkdir BrokenDreams
 echo please grade us easily
 echo please
+exit
