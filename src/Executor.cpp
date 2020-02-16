@@ -17,7 +17,7 @@ Executor::Executor(vector<string> userInput) {
 			
 	//for (int i = 0; i < userInput.size(); i++) {
 
-		input = userInput[i];
+	//	input = userInput[i];
 
         	tokenizer<char_separator<char>> tokens(input, delimiter);
         	std::copy(tokens.begin(), tokens.end(), std::back_inserter<std::vector<std::string> > (exec));
