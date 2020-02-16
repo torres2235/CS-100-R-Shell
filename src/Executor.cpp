@@ -15,9 +15,10 @@ Executor::Executor(vector<string> userInput) {
 	char_separator<char> delimiter(" ");
 
 			
-	for (int i = 0; i < userInput.size() + 1; i++) {
+	//for (int i = 0; i < userInput.size(); i++) {
+
 		input = userInput[i];
-		cout << input;
+
         	tokenizer<char_separator<char>> tokens(input, delimiter);
         	std::copy(tokens.begin(), tokens.end(), std::back_inserter<std::vector<std::string> > (exec));
 
@@ -30,6 +31,22 @@ Executor::Executor(vector<string> userInput) {
 		}
 
 
-        	execvp(commands[0], commands.data());
-	}
+        	pid_t childPid = fork();
+		int exitStatus;
+                        if (childPid == 0) { //child process
+
+                                if (execvp(commands[i], commands.data()) == -1) {
+                                        perror("exec failed, invalid command");
+					exitStatus = -1;
+                                }
+                        }
+
+                        if (childPid > 0) { //parent process
+
+                                if (waitpid(childPid, NULL, 0) == -1) {
+
+                                        perror("wait failed");
+                                }
+			}
+	//}
 }
