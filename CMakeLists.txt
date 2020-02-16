@@ -14,7 +14,8 @@ ADD_EXECUTABLE(rshell
 )
 
 ADD_EXECUTABLE(test
-    src/unit_test.cpp
+    unit_tests/unit_tests.cpp
+    src/Parser.cpp
 )
 
 TARGET_LINK_LIBRARIES(
@@ -22,4 +23,5 @@ TARGET_LINK_LIBRARIES(
     LINK_PUBLIC ${BOOST_LIBRARIES}
 )
 
+TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
