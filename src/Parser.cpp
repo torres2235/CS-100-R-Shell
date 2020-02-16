@@ -19,7 +19,7 @@
 				if (s[i] == '#')
 				{
 					if (quotationCounter % 2 == 0)
-						return s.substr(0, i-1);
+						return s.substr(0, i);
 				}
 			}
 
