@@ -33,9 +33,10 @@ Executor::Executor(vector<string> userInput) {
 
         	pid_t childPid = fork();
 		int exitStatus;
+
                         if (childPid == 0) { //child process
 
-                                if (execvp(commands[i], commands.data()) == -1) {
+                                if (execvp(commands[0], commands.data()) == -1) {
                                         perror("exec failed, invalid command");
 					exitStatus = -1;
                                 }
