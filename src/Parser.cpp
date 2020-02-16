@@ -5,63 +5,79 @@
 #include "../header/Parser.hpp"
 
 
-		Parser::setString(std::string userInput) {
+		Parser::Parser(std::string userInput) {
 			s = userInput;
+			parsedString = s;
 		}
 
-				
-			for(int i = 0; i<= s.length(); i++) {
+		void Parser:: parsedComments(string s) {
+			int quotationCounter = 0;
+
+			for (int i=0; i <s.length(); i++) {
+				if (s[i] == '"') {
+					quotationCounter++;
+				}
+				if (s[i] == '#')
+				{
+					if (quotationCounter % 2 == 0)
+						parsedString = s.substr(0, i-1);
+				}
+			}
+		}
+
+		void Parser::parserLogic(string parsedString) {
+			for(int i = 0; i<= parsedString.length(); i++) {
 				length++;
 
-				if (s[i] == '&' && s[i-1] == '&') { //checking for "&&"
-              				sub = s.substr(index, length-2);
+				if (parsedString[i] == '&' && parsedString[i-1] == '&') { //checking for "&&"
+              				sub = parsedString.substr(index, length-2);
               
         				subStrings.push_back(sub);
               
-              				if (i != s.length()) {
+              				if (i != parsedString.length()) {
                   				index = i;
               				}	
               
-              				sub = s.substr(index-1, 2);
+              				sub = parsedString.substr(index-1, 2);
               				subStrings.push_back(sub);
               				index++;
               				length = 0;
           			}
          		
       
-          			if (s[i] == '|' && s[i-1] == '|') { //checking for "||"
-              				sub = s.substr(index, length-2);
+          			if (parsedString[i] == '|' && parsedString[i-1] == '|') { //checking for "||"
+              				sub = parsedString.substr(index, length-2);
               
               				subStrings.push_back(sub);
               
-              				if (i != s.length()) {
+              				if (i != parsedString.length()) {
                   				index = i;
               				}
               
-             	 			sub = s.substr(index-1, 2);
+             	 			sub = parsedString.substr(index-1, 2);
               				subStrings.push_back(sub);
              	 			index++;
               				length = 0;
           			}
       
-          			if (s[i] == ';') { //checking for ";"
-              				sub = s.substr(index, length-1);
+          			if (parsedString[i] == ';') { //checking for ";"
+              				sub = parsedString.substr(index, length-1);
               
            		     		subStrings.push_back(sub);
               	
-               		 		if (i != s.length()) {
+               		 		if (i != parsedString.length()) {
                   			index = i;
               				}
               
-              				sub = s.substr(index, 1);
+              				sub = parsedString.substr(index, 1);
               				subStrings.push_back(sub);
               				index++;
               				length = 0;
           			}
       
       
-         			if (i == s.length()) {
-              	 			sub = s.substr(index, length);
+         			if (i == parsedString.length()) {
+              	 			sub = parsedString.substr(index, length);
              	 			subStrings.push_back(sub);
           			}
        
