@@ -1,0 +1,5 @@
+echo he#llo
+echo hel#lo
+echo hell#o
+echo hello#
+exit
