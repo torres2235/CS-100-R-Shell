@@ -19,7 +19,7 @@ int main()
 	o.setInput();
 	Parser a = Parser(o.getInput());
 	//vector <string> userString = o.getVector();
-	
+	a.parserLogic();
 	vector <string> newVector= a.getVector();
 
 	if (newVector[0] == "exit") { // Looking for user input "exit" so we can terminate rshell

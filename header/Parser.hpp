@@ -13,14 +13,13 @@ class Parser {
 		std::vector <std::string> subStrings;
 		std::string sub;
 		std::string s;
-		std::string parsedString;
 		int index = 0;
 		int length = 0;
   
 	public:
 		Parser(std::string userInput);
-		void parsedComments(std::string parsedString);
-		void parserLogic(string Input);
+		string parsedComments(std::string s);
+		void parserLogic();
 		vector<string> getVector();              
 };
 
