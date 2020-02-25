@@ -11,7 +11,7 @@
 
 using namespace std;
 using namespace boost;
-//
+
 int main()
 {
     while(1) {
@@ -22,11 +22,22 @@ int main()
 	a.parserLogic();
 	vector <string> newVector= a.getVector();
 
-	if (newVector[0] == "exit") { // Looking for user input "exit" so we can terminate rshell
-		break;
-	}
+	//cout << newVector.size() << endl;
+	
+	for(int i = 0; i <  newVector.size(); i++) {
 
-	Executor b = Executor(newVector);
+                if (newVector[i] == "exit") { // Looking for user input "exit" so we can terminate rshell
+                        return 0;
+                }
+		else if (newVector[i] == "&&" || newVector[i] == "||" || newVector[i] == ";") {
+                        continue;
+                }
+		else {
+                	Executor b = Executor(newVector[i]);
+		}
+        }
+
+	//Executor b = Executor(newVector);
     }
 	return 0;
 }
