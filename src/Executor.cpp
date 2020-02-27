@@ -9,11 +9,13 @@
 using namespace std;
 using namespace boost;
 
+Executor::Executor(string userInput) {};
 
-Executor::Executor(string userInput) {
+int Executor::execute(string userInput) {
 	//input = userInput[0];
 	//This section takes the string and removes whitespace and puts each word into a new vector---------------------------------
 	char_separator<char> delimiter(" ");
+	int exitStatus;
 
 			
 	//for (int i = 0; i < userInput.size(); i++) {
@@ -50,5 +52,7 @@ Executor::Executor(string userInput) {
                                         perror("wait failed");
                                 }
 			}
+
+		return exitStatus;
 	//}
 }

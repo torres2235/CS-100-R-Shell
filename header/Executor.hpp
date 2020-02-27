@@ -18,6 +18,7 @@ class Executor
 		vector<std::string> exec;
 	public:
 		Executor(string userInput);
+		int execute(string userInput);
 };
 
 #endif // __EXECUTOR_HPP__

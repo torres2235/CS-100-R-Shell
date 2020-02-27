@@ -34,6 +34,7 @@ int main()
                 }
 		else {
                 	Executor b = Executor(newVector[i]);
+			b.execute(newVector[i]);
 		}
         }
 
