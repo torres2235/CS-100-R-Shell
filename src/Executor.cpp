@@ -41,13 +41,13 @@ int Executor::execute(string userInput) {
 
                                 if (execvp(commands[0], commands.data()) == -1) {
                                         perror("exec failed, invalid command");
-				//	exitStatus = -1;
+					exitStatus = -1;
                                 }
                         }
 
                         if (childPid > 0) { //parent process
 
-                                if (waitpid(childPid, NULL, 0) == -1) {
+                                if (waitpid(childPid, &exitStatus, 0) == -1) {
 
                                         perror("wait failed");
                                 }
