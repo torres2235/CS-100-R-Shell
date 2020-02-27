@@ -9,13 +9,14 @@
 using namespace std;
 using namespace boost;
 
-Executor::Executor(string userInput) {};
+Executor::Executor() {};
 
 int Executor::execute(string userInput) {
-	//input = userInput[0];
-	//This section takes the string and removes whitespace and puts each word into a new vector---------------------------------
+
+	//This section takes the string and removes whitespace and puts each word into a new vector
+	//-------------------------------------------
 	char_separator<char> delimiter(" ");
-	int exitStatus;
+	int exitStatus = 0;
 
 			
 	//for (int i = 0; i < userInput.size(); i++) {
@@ -39,13 +40,15 @@ int Executor::execute(string userInput) {
 
                         if (childPid == 0) { //child process
 
-                                if (execvp(commands[0], commands.data()) == -1) {
-                                        perror("exec failed, invalid command");
-					exitStatus = -1;
-                                }
+                                //if (execvp(commands[0], commands.data()) == -1) {
+				execvp(commands[0], commands.data());
+                                perror("exec failed, invalid command");
+                                exit(1);
+				//exitStatus = -1;
+                                //}
                         }
 
-                        if (childPid > 0) { //parent process
+                        if (childPid != 0) { //parent process
 
                                 if (waitpid(childPid, &exitStatus, 0) == -1) {
 

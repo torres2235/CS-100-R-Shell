@@ -5,15 +5,13 @@
 
 class Semi : public Connector {
         private:
-                Connector* leftLeaf;
+                std::string leftLeaf;
 
         public:
-                Semi(Connector* left) : Connector() {
-                        leftLeaf = left;
-                }
+                Semi(std::string left) : Connector() { }
 
-                virtual bool isLeftTrue() { 
+                virtual int isLeftTrue();
 
-                }
-
+		virtual int isRightTrue();
+}
 #endif //__SEMI_HPP__

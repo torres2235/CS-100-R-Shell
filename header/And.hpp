@@ -2,29 +2,33 @@
 #define __AND_HPP__
 
 #include "Connector.hpp"
+#include "Parser.hpp"
+#include "Executor.hpp"
 
 class And : public Connector {
 	private:
-		string leftLeaf;
-		string rightLeaf;
+		std::string leftLeaf;
+		std::string rightLeaf;
 
 	public:
-		And(string left, string right) : Connector() { }
-		
-		virtual setLeftLeaf() {
+		And(std::string left, std::string right) : Connector() {
 			leftLeaf = left;
-		}
-
-		virtual setRightLeaf() {
 			rightLeaf = right;
+
 		}
+		
+		//virtual setLeftLeaf(std::string left);
+
+		//virtual setRightLeaf(std::string right);
 
 		virtual int isLeftTrue() {
-			Executor doLeft = Executor(leftLeaf);
+			Executor toCheck = Executor();
+			return toCheck.execute(leftLeaf);
+		};
 		
-		}
-		
-		virtual int isRightTrue() {
-			
-		}
+		virtual int isRightTrue(){
+			Executor toCheck = Executor();
+			return toCheck.execute(rightLeaf);
+		};
+};
 #endif //__AND_HPP__

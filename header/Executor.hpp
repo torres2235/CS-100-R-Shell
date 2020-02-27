@@ -17,7 +17,7 @@ class Executor
 		string input;
 		vector<std::string> exec;
 	public:
-		Executor(string userInput);
+		Executor();
 		int execute(string userInput);
 };
 

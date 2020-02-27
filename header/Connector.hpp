@@ -4,20 +4,22 @@
 using namespace std;
 #include <string>
 #include "Executor.hpp"
+#include "Parser.hpp"
 
-class Connector() {
+class Connector {
 	
         private:
-                int leftBool = 1;
-		int rightBool = 1;
+                //int leftBool;
+		//int rightBool;
 	
         public:
                 Connector() { };
 
-        	virtual setLeftLeaf() = 0;
-		virtual setRightLeaf() = 0;
+        	//virtual setLeftLeaf() = 0;
+		//virtual setRightLeaf() = 0;
 
 		virtual int isLeftTrue() = 0;
 		virtual int isRightTrue() = 0;
-		
+
+};
 #endif //__CONNECTOR_HPP__    

@@ -5,20 +5,14 @@
 
 class Or : public Connector {
         private:
-                Connector* leftLeaf;
-                Connector* rightLeaf;
+                std::string leftLeaf;
+                std::string rightLeaf;
 
         public:
-                Or(Connector* left, Connector* right) : Connector() {
-                        leftLeaf = left;
-                        rightLeaf = right;
-                }
+                Or(Connector* left, Connector* right) : Connector() { }
 
-                virtual bool isLeftTrue() { 
+                virtual int isLeftTrue();
 
-                }
-
-                virtual bool isRightTrue() {
-
-                }
+                virtual int isRightTrue();
+}
 #endif //__OR_HPP__
