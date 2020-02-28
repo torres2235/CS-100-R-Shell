@@ -3,6 +3,10 @@
 #include <boost/tokenizer.hpp>
 #include <vector>
 #include <sys/types.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "../header/Executor.hpp"
 
@@ -11,6 +15,8 @@ using namespace boost;
 
 Executor::Executor() {};
 
+int Executor::test(char* userInput) {
+}
 int Executor::execute(string userInput) {
 
 	//This section takes the string and removes whitespace and puts each word into a new vector
