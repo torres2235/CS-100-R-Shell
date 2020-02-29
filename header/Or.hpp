@@ -1,18 +1,31 @@
 #ifndef __OR_HPP__
 #define __OR_HPP__
 
-#include "Connector.hpp"
+#include "Base.hpp"
+#include "Parser.hpp"
+#include "Executor.hpp"
 
-class Or : public Connector {
+class Or : public Base {
         private:
-                std::string leftLeaf;
-                std::string rightLeaf;
+                Base* leftNode;
+                Base* rightNode;
+                int checker;
 
         public:
-                Or(Connector* left, Connector* right) : Connector() { }
+                Or(Base* left, Base* right) : Base() {
+                        leftNode = left;
+                        rightNode = right;
 
-                virtual int isLeftTrue();
+                }
 
-                virtual int isRightTrue();
-}
+                virtual int evaluate() {
+                        checker = leftNode->evaluate();
+                        if (checker == 256) {
+                                return rightNode->evaluate();
+                        }
+			else {
+				return checker;
+			}
+                };
+};
 #endif //__OR_HPP__
