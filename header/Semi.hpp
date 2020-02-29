@@ -1,17 +1,27 @@
 #ifndef __SEMI_HPP__
 #define __SEMI_HPP__
 
-#include "Connector.hpp"
+#include "Base.hpp"
+#include "Parser.hpp"
+#include "Executor.hpp"
 
-class Semi : public Connector {
+class Semi : public Base {
         private:
-                std::string leftLeaf;
+                Base* leftNode;
+                Base* rightNode;
+                int checker = 0;
 
         public:
-                Semi(std::string left) : Connector() { }
+                Semi(Base* left, Base* right) : Base() {
+                        leftNode = left;
+                        rightNode = right;
 
-                virtual int isLeftTrue();
+                }
 
-		virtual int isRightTrue();
-}
+                virtual int evaluate() {
+                        leftNode->evaluate();
+                        rightNode->evaluate();
+			return checker;
+                };
+};
 #endif //__SEMI_HPP__

@@ -16,7 +16,7 @@ int Executor::execute(string userInput) {
 	//This section takes the string and removes whitespace and puts each word into a new vector
 	//-------------------------------------------
 	char_separator<char> delimiter(" ");
-	int exitStatus = 0;
+	int exitStatus;
 
 			
 	//for (int i = 0; i < userInput.size(); i++) {
@@ -41,7 +41,7 @@ int Executor::execute(string userInput) {
                         if (childPid == 0) { //child process
 
                                 //if (execvp(commands[0], commands.data()) == -1) {
-				execvp(commands[0], commands.data());
+				exitStatus = execvp(commands[0], commands.data());
                                 perror("exec failed, invalid command");
                                 exit(1);
 				//exitStatus = -1;

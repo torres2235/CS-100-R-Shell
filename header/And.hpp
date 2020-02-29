@@ -1,34 +1,31 @@
 #ifndef __AND_HPP__
 #define __AND_HPP__
 
-#include "Connector.hpp"
-#include "Parser.hpp"
+#include "Base.hpp"
+//#include "Parser.hpp"
 #include "Executor.hpp"
 
-class And : public Connector {
+class And : public Base {
 	private:
-		std::string leftLeaf;
-		std::string rightLeaf;
+		Base* leftNode;
+		Base* rightNode;
+		int checker;
 
 	public:
-		And(std::string left, std::string right) : Connector() {
-			leftLeaf = left;
-			rightLeaf = right;
+		And(Base* left, Base* right) : Base() {
+			leftNode = left;
+			rightNode = right;
 
 		}
-		
-		//virtual setLeftLeaf(std::string left);
 
-		//virtual setRightLeaf(std::string right);
-
-		virtual int isLeftTrue() {
-			Executor toCheck = Executor();
-			return toCheck.execute(leftLeaf);
-		};
-		
-		virtual int isRightTrue(){
-			Executor toCheck = Executor();
-			return toCheck.execute(rightLeaf);
+		virtual int evaluate() {
+			checker = leftNode->evaluate();
+			if (checker != 256) {
+				return rightNode->evaluate();
+			}
+			else {
+				return checker;
+			}
 		};
 };
 #endif //__AND_HPP__
