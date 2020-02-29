@@ -16,6 +16,7 @@ using namespace boost;
 Executor::Executor() {};
 
 int Executor::test(char* userInput) {
+	return 0; //place holder until implamented
 }
 int Executor::execute(string userInput) {
 

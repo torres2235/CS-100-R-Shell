@@ -19,6 +19,7 @@ class Executor
 	public:
 		Executor();
 		int execute(string userInput);
+		int test(char* userInput);
 };
 
 #endif // __EXECUTOR_HPP__
