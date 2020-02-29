@@ -15,9 +15,6 @@ using namespace boost;
 
 Executor::Executor() {};
 
-int Executor::test(char* userInput) {
-	return 0; //place holder until implamented
-}
 int Executor::execute(string userInput) {
 
 	//This section takes the string and removes whitespace and puts each word into a new vector
@@ -77,8 +74,8 @@ int Executor::test(char* testInput) {
 	}
 
 	switch (test.st_mode & S_IFMT) {
-		case S_ISDIR: returnStatus = 1; 	break; 
-		case S_ISREG: returnStatus = 2;		break;
+		case S_IFDIR: returnStatus = 1; 	break; 
+		case S_IFREG: returnStatus = 2;		break;
 		default:      returnStatus = 0;		break;
 	}
 
