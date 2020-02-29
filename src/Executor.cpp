@@ -66,3 +66,21 @@ int Executor::execute(string userInput) {
 		return exitStatus;
 	//}
 }
+
+int Executor::test(char* testInput) {
+	int returnStatus = 0;
+	struct stat test;
+	
+	if (stat(testInput, &test) == -1) {
+		perror("stat issue");
+		exit(EXIT_FAILURE);
+	}
+
+	switch (test.st_mode & S_IFMT) {
+		case S_ISDIR: returnStatus = 1; 	break; 
+		case S_ISREG: returnStatus = 2;		break;
+		default:      returnStatus = 0;		break;
+	}
+
+	return returnStatus;
+}
