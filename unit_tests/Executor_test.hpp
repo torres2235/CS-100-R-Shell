@@ -22,4 +22,12 @@ TEST(ExecutorTest, FailTest) {
         EXPECT_EQ(tester.execute("this should fail"), 256);
 }
 
+TEST(ExecutorTest, TestCommandDirectory) {
+	Executor tester = Executor();
+
+	char sample[] = {'h', 'e', 'a', 'd', 'e', 'r'};
+	char* hi = sample;
+	EXPECT_EQ(tester.test(hi), 1);
+}
+
 #endif //__EXECUTOR_TEST_HPP__
