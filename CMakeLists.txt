@@ -13,7 +13,14 @@ ADD_EXECUTABLE(test
     src/Executor.cpp
 )
 
+ADD_EXECUTABLE(rshell
+    src/main.cpp
+    src/Parser.cpp
+    src/Executor.cpp
+)
+
 TARGET_LINK_LIBRARIES(
+    rshell
     LINK_PUBLIC ${BOOST_LIBRARIES}
 )
 
