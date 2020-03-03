@@ -8,6 +8,7 @@
 #include "Or_test.hpp"
 #include "Semi_test.hpp"
 #include "AllConnectors_test.hpp"
+#include "shuntingYard_test.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
