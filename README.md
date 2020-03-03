@@ -9,7 +9,7 @@ Joshua Torres 861221634
 This is a command shell, called R'Shell, developed in C++. In this R'Shell, the user will be prompted with "$" for one command line input at a time, with connectors. The user is able to see directories using "ls". The valid connectors are "&&", "||", and ";" that function as they should in a regular shell. The user is able to print out what they have typed using the "echo" input. Comments are available by using "#". R'Shell will repeatedly read and execute command line input until the "exit" command is executed.
 
 # OMT Diagram
-![R'Shell Assignment 1](images/Rshell.png)
+![R'Shell Assignment 1](images/Rshell_Assn2.png)
 
 Arrays should be replaced with vectors.
 # Classes
