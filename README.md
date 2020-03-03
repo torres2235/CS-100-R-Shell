@@ -45,3 +45,4 @@ Anthony Pan | Joshua Torres
 [X] Create Executor Class | [X] Create Semi
 [ ] Create Exit Class | [X] Create Unit Tests
 [X] Figure out 'Test' functionality | [X] Figure out parentheses precedence functionality
+[ ] | [X] Update README for Assignment 3
