@@ -34,7 +34,7 @@ Arrays should be replaced with vectors.
 # Prototypes/Research
 **fork(), execvp(), waitpid()** - Created a small program (for_demo.cpp) to experiment with fork(), pid, and how children work. At this point we have a clear understanding on how to use these functions together and implament them within our Executor Class. <br /> <br />
 
-**Shunting Yard** - In order to build our expression tree with correct precedence, we are experementing with using the Shunting Yard algorithm.
+**Shunting Yard** - In order to build our expression tree with correct precedence, we are experementing with using the Shunting Yard algorithm. We use this to convert our expression to Postfix notation.
 
 # Development and Roadmap Testing
 Anthony Pan | Joshua Torres
