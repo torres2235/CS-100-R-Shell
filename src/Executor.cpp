@@ -39,7 +39,7 @@ int Executor::execute(string userInput) {
 			commands[i] = &exec[i][0];//setting elementsto new vector
 		}
 		
-		if (string(commands[0]) == "test") {
+		if (string(commands[0]) == "test" || string(commands[0]) == "[") {
 			//cout << commands[0] << " " << commands[1] << " " << commands[2] << endl;
 			if (string(commands[1]) == "-e") {
 				exitStatus = test(commands[2]);
