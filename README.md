@@ -25,7 +25,9 @@ Arrays should be replaced with vectors.
 
 **Or** - Inherits from Base Class and will process when the user inputs "||". If first arguement passes only output first. If first arguement fails, run second arguement. If second arguement passes, output. Executor is ran in here to do logic testing. <br /> 
 
-**Semi** -Inherits from Base Class and will process when the user inputs ";". Takes both children leaves and runs them both, regardless of whether one fails or not. Executor is ran in here to do logic testing. <br /> <br />
+**Semi** -Inherits from Base Class and will process when the user inputs ";". Takes both children leaves and runs them both, regardless of whether one fails or not. Executor is ran in here to do logic testing. <br /> 
+
+**shuntingYard** - takes the vector <string> created by the Parser and returns a queue <string> of our expression in Postfix notation. <br /> <br />
 
 **Exit** - Closes the R'Shell
 
@@ -42,4 +44,4 @@ Anthony Pan | Joshua Torres
 [---] Create Tokenizer Class | [X] Create Or
 [X] Create Executor Class | [X] Create Semi
 [ ] Create Exit Class | [X] Create Unit Tests
-[X] Figure out 'Test' functionality | [ ] Figure out parentheses precedence functionality
+[X] Figure out 'Test' functionality | [X] Figure out parentheses precedence functionality
