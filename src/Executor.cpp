@@ -67,12 +67,7 @@ int Executor::execute(string userInput) {
 int Executor::test(char* testInput) {
 	int returnStatus = 0;
 	struct stat test;
-	
-	if (stat(testInput, &test) == -1) {
-		perror("stat issue");
-		exit(EXIT_FAILURE);
-	}
-
+	stat(testInput, &test);
 	switch (test.st_mode & S_IFMT) {
 		case S_IFDIR: returnStatus = 1; 	break; 
 		case S_IFREG: returnStatus = 2;		break;

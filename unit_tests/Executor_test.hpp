@@ -30,4 +30,13 @@ TEST(ExecutorTest, TestCommandDirectory) {
 	EXPECT_EQ(tester.test(hi), 1);
 }
 
+TEST(ExecutorTest, FailTestCommandDirectory) {
+        Executor tester = Executor();
+
+        char sample[] = {'h', 'e', 'a', 'd', 'e'};
+        char* hi = sample;
+        EXPECT_EQ(tester.test(hi), 0);
+}
+
+
 #endif //__EXECUTOR_TEST_HPP__
