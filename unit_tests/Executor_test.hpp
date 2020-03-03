@@ -38,5 +38,30 @@ TEST(ExecutorTest, FailTestCommandDirectory) {
         EXPECT_EQ(tester.test(hi), 0);
 }
 
+TEST(ExecutorTest, TestCommandMain) {
+	Executor tester = Executor();
+
+	char sample[] = {'s', 'r', 'c', '/', 'm', 'a', 'i', 'n', '.', 'c', 'p', 'p'};
+	char* hi = sample;
+	EXPECT_EQ(tester.test(hi), 2);
+}
+
+TEST(ExecutorTest, FailTestCommandMain) {
+        Executor tester = Executor();
+
+        char sample[] = {'s', 'r', 'c', '/', 'm', 'a', 'i', 'n', '.', 'c', 'p'};
+        char* hi = sample;
+        EXPECT_EQ(tester.test(hi), 0);
+}
+
+TEST(ExecutorTest, FailTestCommandMain2) {
+        Executor tester = Executor();
+
+        char sample[] = {'m', 'a', 'i', 'n', '.', 'c', 'p', 'p'};
+        char* hi = sample;
+        EXPECT_EQ(tester.test(hi), 0);
+}
+
+
 
 #endif //__EXECUTOR_TEST_HPP__
