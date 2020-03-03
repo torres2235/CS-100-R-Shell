@@ -1,0 +1,4 @@
+test header
+test src/main.cpp
+test head
+exit

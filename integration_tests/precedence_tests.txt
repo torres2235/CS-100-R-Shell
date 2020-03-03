@@ -1,0 +1,4 @@
+(echo hello && echo goodbye) || echo hi
+(ls -a -l || echo goodybe) && ls -a -l
+(echo bye; echo hi) || lie
+exit

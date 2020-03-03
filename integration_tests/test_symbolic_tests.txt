@@ -1,0 +1,5 @@
+[ header ]
+[ src/main.cpp ]
+[ nope ]
+[ yep ]
+exit
