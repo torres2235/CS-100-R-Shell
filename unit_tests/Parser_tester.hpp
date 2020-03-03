@@ -41,7 +41,7 @@ TEST(ParserTester, ParseLongString) {
 	Parser* str = new Parser("mkdir && echo hello || echo goodbye;");
 	str->parserLogic();
         vector<string> parsed = str->getVector();
-        EXPECT_EQ(parsed.at(2), " echo hello ");
+        EXPECT_EQ(parsed.at(2), "echo hello ");
 }
 
 TEST(ParserTester, ParseLongString2) {
@@ -55,7 +55,7 @@ TEST(ParserTester, ParseLongString3) {
 	Parser* str = new Parser("mkdir && echo hello || echo goodbye;");
 	str->parserLogic();
         vector<string> parsed = str->getVector();
-        EXPECT_EQ(parsed.at(4), " echo goodbye");
+        EXPECT_EQ(parsed.at(4), "echo goodbye");
 }
 
 TEST(ParserTester, ParseLongString4) {
